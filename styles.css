@@ -1,0 +1,59 @@
+.wheel-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    padding-top: 100px;
+}
+
+#wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+#arrow {
+    content: "";
+    position: absolute;
+    top: 70px; /* Adjust this value to position the arrow */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent; /* Adjust this value to change the size of the arrow */
+    border-right: 20px solid transparent; /* Adjust this value to change the size of the arrow */
+
+    border-top: 20px solid black;
+}
+
+.wheel-slice {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Start in the center */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adjust this to move the text to the center */
+    text-align: center;
+    transform: rotate(0deg); /* Adjust rotate for centering */
+    background-image: linear-gradient(to top right, transparent 50%, #fff 0),
+    linear-gradient(to bottom right, #fff 50%, transparent 0);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: left, right;
+    transition: transform 3s ease-in-out;
+    max-width: 125px;
+    max-height: 76%;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 150px;
+}
+
+#spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
